@@ -1,0 +1,46 @@
+{
+    "cSpell.words": [
+        "allanswers",
+        "Allstackoverflowurls",
+        "apirequets",
+        "aurl",
+        "deleteonfail",
+        "espree",
+        "funcsz",
+        "gistgithub",
+        "githubgist",
+        "Grapic",
+        "isforbbden",
+        "isvirus",
+        "itme",
+        "linkedom",
+        "markfown",
+        "maxmium",
+        "meriyah",
+        "minmium",
+        "OPENAI",
+        "Reqs",
+        "Requirment",
+        "Requirments",
+        "resolev",
+        "stackoverflow",
+        "tabnine",
+        "tesseract"
+    ],
+    "grammarly.overrides": [
+        {
+            "files": [
+                "**/package.json"
+            ],
+            "config": {
+                "audience": "expert",
+                "dialect": "american",
+                "domain": "general",
+                "emotions": [
+                    "friendly"
+                ],
+                "goals": []
+            }
+        }
+    ]
+}

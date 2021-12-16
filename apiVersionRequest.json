@@ -1,0 +1,142 @@
+{
+  "v1": [
+    {
+      "version": "v1",
+      "routeType": "/ai",
+      "router": { "method": "GET", "path": "/chatbot" },
+      "example": "/api/v1/ai/chatbot"
+    },
+    {
+      "version": "v1",
+      "routeType": "/ai",
+      "router": { "method": "GET", "path": "/snippet" },
+      "example": "/api/v1/ai/snippet"
+    },
+    {
+      "version": "v1",
+      "routeType": "/code",
+      "router": { "method": "GET", "path": "/snippet" },
+      "example": "/api/v1/code/snippet"
+    },
+    {
+      "version": "v1",
+      "routeType": "/code",
+      "router": { "method": "GET", "path": "/github-gist" },
+      "example": "/api/v1/code/github-gist"
+    },
+    {
+      "version": "v1",
+      "routeType": "/code",
+      "router": { "method": "POST", "path": "/prettie" },
+      "example": "/api/v1/code/prettie"
+    },
+    {
+      "version": "v1",
+      "routeType": "/code",
+      "router": { "method": "GET", "path": "/stackoverflow" },
+      "example": "/api/v1/code/stackoverflow"
+    },
+    {
+      "version": "v1",
+      "routeType": "/code",
+      "router": { "method": "GET", "path": "/tabnine" },
+      "example": "/api/v1/code/tabnine"
+    },
+    {
+      "version": "v1",
+      "routeType": "/reads",
+      "router": { "method": "GET", "path": "/alternative" },
+      "example": "/api/v1/reads/alternative"
+    },
+    {
+      "version": "v1",
+      "routeType": "/reads",
+      "router": { "method": "POST", "path": "/image" },
+      "example": "/api/v1/reads/image"
+    },
+    {
+      "version": "v1",
+      "routeType": "/reads",
+      "router": { "method": "POST", "path": "/isvirus" },
+      "example": "/api/v1/reads/isvirus"
+    },
+    {
+      "version": "v1",
+      "routeType": "/reads",
+      "router": { "method": "GET", "path": "/qr-read" },
+      "example": "/api/v1/reads/qr-read"
+    },
+    {
+      "version": "v1",
+      "routeType": "/reads",
+      "router": { "method": "GET", "path": "/idea" },
+      "example": "/api/v1/reads/idea"
+    },
+    {
+      "version": "v1",
+      "routeType": "/reads",
+      "router": { "method": "GET", "path": "/tts" },
+      "example": "/api/v1/reads/tts"
+    },
+    {
+      "version": "v1",
+      "routeType": "/reads",
+      "router": { "method": "POST", "path": "/type" },
+      "example": "/api/v1/reads/type"
+    },
+    {
+      "version": "v1",
+      "routeType": "/search",
+      "router": { "method": "GET", "path": "/anime" },
+      "example": "/api/v1/search/anime"
+    },
+    {
+      "version": "v1",
+      "routeType": "/search",
+      "router": { "method": "GET", "path": "/lyrics" },
+      "example": "/api/v1/search/lyrics"
+    },
+    {
+      "version": "v1",
+      "routeType": "/search",
+      "router": { "method": "GET", "path": "/question" },
+      "example": "/api/v1/search/question"
+    },
+    {
+      "version": "v1",
+      "routeType": "/search",
+      "router": { "method": "GET", "path": "/weather" },
+      "example": "/api/v1/search/weather"
+    },
+    {
+      "version": "v1",
+      "routeType": "/search",
+      "router": { "method": "GET", "path": "/wiki" },
+      "example": "/api/v1/search/wiki"
+    },
+    {
+      "version": "v1",
+      "routeType": "/write",
+      "router": { "method": "POST", "path": "/create" },
+      "example": "/api/v1/write/create"
+    },
+    {
+      "version": "v1",
+      "routeType": "/write",
+      "router": { "method": "PUT", "path": "/delete" },
+      "example": "/api/v1/write/delete"
+    },
+    {
+      "version": "v1",
+      "routeType": "/write",
+      "router": { "method": "GET", "path": "/get/:id" },
+      "example": "/api/v1/write/get/:id"
+    },
+    {
+      "version": "v1",
+      "routeType": "/write",
+      "router": { "method": "GET", "path": "/search/:query" },
+      "example": "/api/v1/write/search/:query"
+    }
+  ]
+}
