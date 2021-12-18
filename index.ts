@@ -8,8 +8,8 @@ import { format } from "prettier";
 
 mongoose.connect("mongodb://localhost:27017/funcszApi", (err) => {
   if (err)
-    return console.error("Some Thing Went Wrong When Connecting With mongoDB");
-  else return console.log(`Mongodb Connected Successfully!`);
+    return console.error("Some Thing Went Wrong When Connecting With mongoDB".red);
+  else return console.log(`Mongodb Connected Successfully!`.green.bold);
 });
 
 // setup express routes

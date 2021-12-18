@@ -17,6 +17,9 @@ const router = Router();
 
 router.post("/type", async (req, res) => {
   let word = req.body.word;
+  let language = req.body.language;
+
+  if(!language || !['en','fr','de'].includes(language)) language = 'en'
 
   if (!word) {
     return res.status(404).json({
@@ -35,7 +38,7 @@ router.post("/type", async (req, res) => {
   let all: any[] = [];
 
   setTimeout(() => {
-    importAll(all, words).then(() => {
+    importAll(all, words,language).then(() => {
       let i = setInterval(() => {
         if (all.length !== words.length) return;
         clearInterval(i);
@@ -55,10 +58,10 @@ router.post("/type", async (req, res) => {
 
 export default router;
 
-function importAll(array: any[], words: string[]): Promise<void> {
+function importAll(array: any[], words: string[],language:'en'|'fr'|'de'): Promise<void> {
   return new Promise((resolve, reject) => {
     words.forEach((word, index, list) => {
-      wd.getDef(cleanedText(word), "en", null, (def) => {
+      wd.getDef(cleanedText(word), language, null, (def) => {
         array.push(def);
       });
       if (index === list.length - 1) return resolve();
