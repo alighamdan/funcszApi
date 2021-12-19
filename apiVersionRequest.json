@@ -21,6 +21,12 @@
     {
       "version": "v1",
       "routeType": "/code",
+      "router": { "method": "GET", "path": "/geeks-for-geeks" },
+      "example": "/api/v1/code/geeks-for-geeks"
+    },
+    {
+      "version": "v1",
+      "routeType": "/code",
       "router": { "method": "GET", "path": "/github-gist" },
       "example": "/api/v1/code/github-gist"
     },
