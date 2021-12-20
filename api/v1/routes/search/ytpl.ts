@@ -1,4 +1,4 @@
-import { query, Router } from 'express';
+import { Router } from 'express';
 import ytsr from 'youtube-sr';
 
 const router = Router();
