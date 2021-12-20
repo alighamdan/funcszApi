@@ -11,7 +11,6 @@ router.get("/games", (req, res) => {
             error: "Please Provide q Param",
         });
     }
-
     getGames(String(q).replace(/%20/g,'+').replace(/\s/g,'+'))
     .then(data => {
         return res.json(data)
