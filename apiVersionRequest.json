@@ -122,6 +122,12 @@
     },
     {
       "version": "v1",
+      "routeType": "/search",
+      "router": { "method": "GET", "path": "/ytpl" },
+      "example": "/api/v1/search/ytpl"
+    },
+    {
+      "version": "v1",
       "routeType": "/write",
       "router": { "method": "POST", "path": "/create" },
       "example": "/api/v1/write/create"

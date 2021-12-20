@@ -1,27 +1,27 @@
-import { Router } from 'express';
-import ytsr from 'youtube-sr';
+import { Router } from "express";
+import ytsr from "../../../../src/youtube-sr";
 
 const router = Router();
 
-router.get('/ytpl',async(req,res) => {
-    let id = req.query.id;
-    if (!id || typeof id !== 'string') {
-        return res.status(404).json({
-            error:"Please provide a id Parameters"
-        })
-    }
+router.get("/ytpl", async (req, res) => {
+  let q = req.query.q;
+  if (!q || typeof q !== "string") {
+    return res.status(404).json({
+      error: "Please provide a q Parameter",
+    });
+  }
 
-    ytsr.getPlaylist(String(id))
-    .then((p) => p.fetch())
+  ytsr
+    .search(String(q), { type: "playlist", safeSearch: false })
     .then((playlistVideos) => {
         return res.json(playlistVideos)
     })
     .catch((err) => {
-        return res.status(500).json({
-            error:"Cannot Get Playlist Videos",
-            err
-        })
-    })
-})
+      return res.status(404).json({
+        error: "Cannot Get Playlist Videos",
+        err,
+      });
+    });
+});
 
 export default router;
