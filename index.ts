@@ -8,7 +8,9 @@ import { format } from "prettier";
 
 mongoose.connect("mongodb://localhost:27017/funcszApi", (err) => {
   if (err)
-    return console.error("Some Thing Went Wrong When Connecting With mongoDB".red);
+    return console.error(
+      "Some Thing Went Wrong When Connecting With mongoDB".red
+    );
   else return console.log(`Mongodb Connected Successfully!`.green.bold);
 });
 
@@ -17,6 +19,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+let all: any = {};
 readdirSync("./api", {
   withFileTypes: true,
 })
@@ -30,7 +33,6 @@ readdirSync("./api", {
       .filter((e) => !e.includes("functions.ts"))
       .filter((e) => !e.includes("index.ts"))
       .filter((e) => e.endsWith(".ts"));
-    let all: any = {};
     apiroutes.forEach((fileDir) => {
       let route = require(fileDir).default;
       if (!route || !route.stack[0]) return;
