@@ -16,7 +16,7 @@ readdirs(__dirname, ".ts")
     console.log(
       `${
         i + 1 > 9 ? i + 1 : i + 1 + " "
-      }- Loaded V1: ${`/${d.type}`} ${`Router: ${`/${d.RouterName}`}`}`.rainbow
+      }- Loaded V1: ${`/${d.type}`} ${`Router: ${route.stack[0].route.path}`}`.rainbow
         .bold,
       "  Method: ".white,
       `${Object.keys(

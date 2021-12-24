@@ -23,5 +23,4 @@ router.get('/wiki',(req,res) => {
         })
     })
 })
-//https://api.stackexchange.com/2.3/search/advanced?order=desc&sort=activity&q=discord.js%20is%20not%20defined&site=stackoverflow
 export default router;

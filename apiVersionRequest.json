@@ -149,6 +149,12 @@
       "routeType": "/write",
       "router": { "method": "GET", "path": "/search/:query" },
       "example": "/api/v1/write/search/:query"
+    },
+    {
+      "version": "v1",
+      "routeType": "/write",
+      "router": { "method": "POST", "path": "/jsonxml" },
+      "example": "/api/v1/write/jsonxml"
     }
   ]
 }

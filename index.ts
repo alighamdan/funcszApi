@@ -60,12 +60,12 @@ readdirSync("./api", {
       });
     });
 
-    writeFileSync(
-      "./apiVersionRequest.json",
-      format(JSON.stringify(all), {
-        parser: "json",
-      })
-    );
+    // writeFileSync(
+    //   "./apiVersionRequest.json",
+    //   format(JSON.stringify(all), {
+    //     parser: "json",
+    //   })
+    // );
 
     app.listen(3000, () => {
       console.log(
