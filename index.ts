@@ -14,7 +14,6 @@ mongoose.connect("mongodb://localhost:27017/funcszApi", (err) => {
   else return console.log(`Mongodb Connected Successfully!`.green.bold);
 });
 
-// setup express routes
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -59,6 +58,7 @@ readdirSync("./api", {
         }${route.stack[0].route.path}`,
       });
     });
+    // commented out because Its Restart The nodemon on Start.
 
     // writeFileSync(
     //   "./apiVersionRequest.json",

@@ -4,6 +4,7 @@ import { readdirs } from "../../../src/functions";
 const router = Router();
 
 
+// loop over all routes
 readdirs(__dirname, ".ts")
   .filter((e) => !e.includes("index.ts"))
   .filter((e) => !e.includes("functions.ts"))
@@ -23,9 +24,10 @@ readdirs(__dirname, ".ts")
         require(dir).default.stack[0].route.methods
       )[0].toUpperCase()}`.rainbow.bgBlack.italic
     );
-  });
+});
 
 export default router;
+
 
 function extract(string: string) {
   let type = string.split("/").reverse().slice(1)[0];
