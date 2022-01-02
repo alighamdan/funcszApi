@@ -5,7 +5,7 @@
   "main": "index.ts",
   "scripts": {
     "test": "nodemon index.ts --ignore './apiVersionRequest.json'",
-    "start": "npx ts-node index.ts"
+    "start": "npm i && npx ts-node index.ts"
   },
   "keywords": [],
   "author": "",
