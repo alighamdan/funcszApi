@@ -21,6 +21,12 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get("/", (req, res) => {
+  return res.json({
+    status: "work",
+    endpoints: require("./apiVersionRequest.json"),
+  });
+});
 let all = {};
 readdirSync("./api", {
   withFileTypes: true,
@@ -71,12 +77,6 @@ readdirSync("./api", {
     // );
 
     app.listen(3000, () => {
-      app.get("/", (req, res) => {
-        return res.json({
-          status: "work",
-          endpoints: require("./apiVersionRequest.json"),
-        });
-      });
       console.log(
         table(
           [
