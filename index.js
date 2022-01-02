@@ -22,11 +22,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  return res.json({
-    status: "work",
-    endpoints: require("./apiVersionRequest.json"),
-  });
+    return res.sendStatus(200)
 });
+
 let all = {};
 readdirSync("./api", {
   withFileTypes: true,
