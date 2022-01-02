@@ -24,13 +24,13 @@ router.post("/image", async (req, res) => {
     try {
         recognize(
             image,
-            "eng",
+            "eng",// export as english language
             {
                 errorHandler: (ar: any) => {
                     res.json({ msg: "Some Thing Went Wrong", error: ar })
                     return false
                 },
-                langPath: __dirname + "/lang-data"
+                langPath: __dirname + "/lang-data"// the train data folder
             }
         )
             .then(({ data: { text } }) => {
