@@ -1,1 +1,1 @@
-Worker: ts-node index.ts
+Worker: npm start
