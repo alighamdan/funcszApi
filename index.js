@@ -38,12 +38,12 @@ var all = {};
     .forEach(function (folder, index, mainList) {
     var ver = require("./api/" + folder.name + "/routes/index").default;
     app.use("/api/" + folder.name, ver);
-    var apiroutes = (0, functions_1.readdirs)("./api/" + folder.name + "/routes", ".ts")
-        .filter(function (e) { return !e.includes("functions.ts"); })
-        .filter(function (e) { return !e.includes("index.ts"); })
-        .filter(function (e) { return e.endsWith(".ts"); });
+    var apiroutes = (0, functions_1.readdirs)("./api/" + folder.name + "/routes", ".js")
+        .filter(function (e) { return !e.includes("functions.js"); })
+        .filter(function (e) { return !e.includes("index.js"); })
+        .filter(function (e) { return e.endsWith(".js"); });
     apiroutes.forEach(function (fileDir) {
-        var route = require(fileDir).default;
+        var route = require(fileDir.endsWith('.js')?fileDir:fileDir + '.js').default;
         if (!route || !route.stack[0])
             return;
         if (!all[folder.name])

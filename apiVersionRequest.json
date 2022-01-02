@@ -9,8 +9,8 @@
     {
       "version": "v1",
       "routeType": "/ai",
-      "router": { "method": "GET", "path": "/snippet" },
-      "example": "/api/v1/ai/snippet"
+      "router": { "method": "POST", "path": "/py-to-js" },
+      "example": "/api/v1/ai/py-to-js"
     },
     {
       "version": "v1",
@@ -153,8 +153,14 @@
     {
       "version": "v1",
       "routeType": "/write",
-      "router": { "method": "POST", "path": "/jsonxml" },
-      "example": "/api/v1/write/jsonxml"
+      "router": { "method": "POST", "path": "/ts-compiler" },
+      "example": "/api/v1/write/ts-compiler"
+    },
+    {
+      "version": "v1",
+      "routeType": "/write",
+      "router": { "method": "POST", "path": "/xml2json" },
+      "example": "/api/v1/write/xml2json"
     }
   ]
 }

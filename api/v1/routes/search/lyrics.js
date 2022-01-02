@@ -118,9 +118,10 @@ router.get("/lyrics", function (req, res) { return __awaiter(void 0, void 0, voi
                         return;
                     setTimeout(function () {
                         clearInterval(i);
-                        return res.json({
+                        res.json({
                             songs: all
                         });
+                        clearInterval(i);
                     }, 1000);
                 });
                 return [2 /*return*/];
