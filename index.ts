@@ -6,13 +6,15 @@ import mongoose from "mongoose";
 import { readdirSync, writeFileSync } from "fs";
 import { format } from "prettier";
 
-mongoose.connect("mongodb://localhost:27017/funcszApi", (err) => {
-  if (err)
-    return console.error(
-      "Some Thing Went Wrong When Connecting With mongoDB".red
-    );
-  else return console.log(`Mongodb Connected Successfully!`.green.bold);
-});
+mongoose.connect(
+  "mongodb+srv://funcsz:gbj2SnPh4d6Q!K5@funcsz.ndwuv.mongodb.net/funcsz?retryWrites=true&w=majority",(err) => {
+    if (err)
+      return console.error(
+        "Some Thing Went Wrong When Connecting With mongoDB".red
+      );
+    else return console.log(`Mongodb Connected Successfully!`.green.bold);
+  }
+);
 
 const app = express();
 app.use(express.json());
@@ -66,7 +68,7 @@ readdirSync("./api", {
         parser: "json",
       })
     );
-    
+
     app.listen(3000, () => {
       console.log(
         table(
