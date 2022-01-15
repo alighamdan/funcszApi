@@ -51,10 +51,12 @@ var genius_lyrics_1 = __importDefault(require("genius-lyrics"));
 var client = new genius_lyrics_1.default.Client();
 var router = (0, express_1.Router)();
 router.get("/lyrics", function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    try{
     var SongName, songs, all, songs_1, songs_1_1, song, _a, _b, e_1_1, i;
     var _c;
     var e_1, _d;
     return __generator(this, function (_e) {
+        
         switch (_e.label) {
             case 0:
                 SongName = req.query.title;
@@ -118,14 +120,19 @@ router.get("/lyrics", function (req, res) { return __awaiter(void 0, void 0, voi
                         return;
                     setTimeout(function () {
                         clearInterval(i);
-                        res.json({
-                            songs: all
-                        });
+                        
+                            res.json({
+                            songs: all || []
+                            });
+                        
                         clearInterval(i);
                     }, 1000);
                 });
                 return [2 /*return*/];
         }
     });
+                }catch(e){
+                            res.json({songs:[]})
+                        }
 }); });
 exports.default = router;
