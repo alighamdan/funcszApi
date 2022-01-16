@@ -1,5 +1,5 @@
-import { Router } from "express";
-import Genius from "genius-lyrics";
+const { Router } = require("express");
+const Genius = require("genius-lyrics");
 
 const client = new Genius.Client();
 const router = Router();
