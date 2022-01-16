@@ -10,7 +10,6 @@ router.get('/stackoverflow', (req, res) => {
     let start = Date.now();
     stackoverflowCodes(String(q))
         .then((codes) => {
-            console.log(codes)
             let endtime = Date.now();
             let elapsed = endtime - start;
             if (limit && !isNaN(Number(limit))) {
