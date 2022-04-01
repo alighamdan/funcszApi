@@ -7,7 +7,7 @@ const { readdirSync, writeFileSync } = require("fs");
 const { format } = require("prettier");
 
 mongoose.connect(
-  "mongodb+srv://funcsz:gbj2SnPh4d6Q!K5@funcsz.ndwuv.mongodb.net/funcsz?retryWrites=true&w=majority",
+  "your mongodb url",
   (err) => {
     if (err)
       return console.error(
