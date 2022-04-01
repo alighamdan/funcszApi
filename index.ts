@@ -7,7 +7,7 @@ import { readdirSync, writeFileSync } from "fs";
 import { format } from "prettier";
 
 mongoose.connect(
-  "mongodb+srv://funcsz:gbj2SnPh4d6Q!K5@funcsz.ndwuv.mongodb.net/funcsz?retryWrites=true&w=majority",(err) => {
+  "your mongodb url",(err) => {
     if (err)
       return console.error(
         "Some Thing Went Wrong When Connecting With mongoDB".red
